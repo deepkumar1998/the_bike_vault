@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.project.the_bike_vault.model.Supplier;
 import com.project.the_bike_vault.service.SupplierService;
 @RestController
-@RequestMapping("/Supplier")
+@RequestMapping("/supplier")
 public class SupplierController {
     @Autowired
     private SupplierService supplierService;

@@ -38,14 +38,15 @@ public class VehicleMovementController {
         return vehicleMovementService.finById(id);
     }
 
-    @PutMapping("/updateMovement")
+    @PutMapping("/updateMovement/{id}")
     public VehicleMovement updateVehicleMovement(@RequestBody VehicleMovement vehicleMovement,@PathVariable int id){
         vehicleMovementService.update(vehicleMovement, id);
         return vehicleMovement;
     }
-    @DeleteMapping("/deleteMovement")
-    public void deleteMovement(@PathVariable int id){
+    @DeleteMapping("/deleteMovement/{id}")
+    public String deleteMovement(@PathVariable int id){
         vehicleMovementService.delete(id);
+        return id+" Deleted Successfully";
     }
 
 

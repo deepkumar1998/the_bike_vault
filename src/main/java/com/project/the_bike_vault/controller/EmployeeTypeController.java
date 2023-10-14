@@ -3,6 +3,7 @@ package com.project.the_bike_vault.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,7 +38,7 @@ public class EmployeeTypeController {
         employeeTypeService.update(employeeType, id);
         return employeeType;
     }
-
+    @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable int id){
         employeeTypeService.delete(id);
         return id+" Deleted Successfully";

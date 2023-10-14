@@ -46,8 +46,9 @@ public class VehicleStatusController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteStatus(@PathVariable ("id") int id){
+    public String deleteStatus(@PathVariable ("id") int id){
         vehicleStatusService.delete(id);
+        return id+" Deleted Successfully";
     }
 
 
