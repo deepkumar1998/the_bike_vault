@@ -43,7 +43,8 @@ public class VehicleTypeController {
     }
 
     @DeleteMapping("/deleteType/{id}")
-    public void deleteVehicleType(@PathVariable int id){
+    public String deleteVehicleType(@PathVariable int id){
         vehicleTypeService.delete(id);
+        return id+" Deleted Successfully";
     }
 }
