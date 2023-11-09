@@ -3,6 +3,7 @@ package com.project.the_bike_vault.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.project.the_bike_vault.model.Country;
 import com.project.the_bike_vault.service.CountryService;
 @RestController
+@CrossOrigin(origins = "http://localhost:4200/")
 @RequestMapping("/country")
 public class CountryController {
     @Autowired
