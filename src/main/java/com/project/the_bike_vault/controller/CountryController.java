@@ -36,15 +36,15 @@ public class CountryController {
     public Country getById(@PathVariable int id){
         return countryService.findById(id);
     }
-    @PutMapping("/update/id")
+    @PutMapping("/update/{id}")
     public Country update(@RequestBody Country country, @PathVariable int id){
         countryService.updateCountry(country, id);
         return country;
     }
     @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable int id){
+    public void delete(@PathVariable int id){
         countryService.delete(id);
-        return id+" Deleted Successfully";
+        
     }
 
 

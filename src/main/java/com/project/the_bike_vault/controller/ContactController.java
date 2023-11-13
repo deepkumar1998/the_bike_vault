@@ -43,6 +43,7 @@ public class ContactController {
     @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable int id){
         contactService.delete(id);
+        System.out.println("Deleted Successfully");
         return id+" Deleted Successfully";
         
     }

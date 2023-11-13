@@ -43,15 +43,15 @@ public State getById(@PathVariable int id){
 
 //update
 @PutMapping("/update/{id}")
-public State update(@RequestBody State state,@PathVariable int id){
-    return stateService.update(state, id);
+public void update(@RequestBody State state,@PathVariable int id){
+    stateService.update(state, id);
 }
 
 //delete
 @DeleteMapping("/delete/{id}")
-public String delete(@PathVariable int id){
+public void delete(@PathVariable int id){
     stateService.delete(id);
-    return id+" Deleted Successfully";
+
 }
 
 
